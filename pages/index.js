@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>VPN Best Landingpage </title>
+        <title>Cheer For Ukraine</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
