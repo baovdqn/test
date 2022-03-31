@@ -48,17 +48,35 @@ const Hero = ({
                         ></div>
                     </div>
                 </div>
-                <div className="flex w-full">
-                    <div className="h-full w-full">
-                        {/* <Image
-                            src="/assets/flag-ukraine.jpeg"
-                            alt="flag ukraine"
-                            quality={100}
-                            width={612}
-                            height={383}
-                            layout="responsive"
-                        /> */}
+                <div className="w-full h-full w-full border-2 border-gray-100 rounded-xl py-6 px-8 flex flex-col justify-center">
+                    <p className="mb-2">Give token</p>
+                    <div className="grid grid-cols-6 gap-10">
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-2 p-2 border-2 border-gray-100 rounded-l cursor-pointer">
+                            10.000
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-2 p-2 border-2 border-gray-100 rounded-l cursor-pointer">
+                            20.000
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-2 p-2 border-2 border-gray-100 rounded-l cursor-pointer">
+                            50.000
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-2 p-2 border-2 border-gray-100 rounded-l cursor-pointer">
+                            100.000
+                        </div>
+                        <input
+                            type="number"
+                            placeholder="Your amount"
+                            className="col-span-6 sm:col-span-6 lg:col-span-4 p-2 border-2 border-gray-100 rounded-l cursor-pointer"
+                        />
                     </div>
+                    <div className="mt-6">
+                        <label></label>
+                        <select class="appearance-none p-2 border-2 border-gray-100 rounded-l mb-3">
+                            <option>Give emergency aid in Ukraine</option>
+                            <option>Maybe</option>
+                        </select>
+                    </div>
+                    <ButtonPrimary>Give</ButtonPrimary>
                 </div>
             </div>
             <div className="relative w-full flex">
