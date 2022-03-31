@@ -11,7 +11,7 @@ const Feature = () => {
                 <div className="flex w-full justify-end">
                     <div className="h-full w-full p-4">
                         <Image
-                            src="/assets/Illustration2.png"
+                            src="/assets/Muc2.png"
                             alt="VPN Illustrasi"
                             layout="responsive"
                             quality={100}
@@ -20,11 +20,18 @@ const Feature = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col items-end justify-center ml-auto w-full lg:w-9/12">
+                <div className="flex flex-col items-center justify-center ml-auto w-full lg:w-9/12">
                     <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
-                        Mục 1
+                        Situation
                     </h3>
-                    <p className="my-2 text-black-500">Nội dụng mục 1</p>
+                    <p className="my-2 text-black-500">
+                        In addition to shelling and pumping attacks, the Ukrainian people also face
+                        humanitarian disasters. Many residents are fleeing and seeking shelter for
+                        themselves and their families. Right now, they desperately need our help and
+                        yours to improve their lives. With a very small amount of your money, join
+                        us in accompanying the Ukrainian people through the current crisis and
+                        calling for peace for the future.{" "}
+                    </p>
                     {/* <ul className="text-black-500 self-start list-inside ml-8">
             <li className="relative circle-check custom-list">
               Powerfull online protection.

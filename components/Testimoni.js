@@ -15,7 +15,7 @@ const Testimoni = ({
             country: "Poland",
             rating: "4.5",
             testimoni:
-                "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+                "The community's cooperation will make an important contribution to helping medical staff have more strength to fight against the pandemic",
         },
         {
             name: "iezh Robert",
@@ -24,7 +24,7 @@ const Testimoni = ({
             country: "Poland",
             rating: "4.5",
             testimoni:
-                "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+                "The community's cooperation will make an important contribution to helping medical staff have more strength to fight against the pandemic",
         },
         {
             name: "iezh Robert",
@@ -33,7 +33,7 @@ const Testimoni = ({
             country: "Poland",
             rating: "4.5",
             testimoni:
-                "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+                "The community's cooperation will make an important contribution to helping medical staff have more strength to fight against the pandemic",
         },
         {
             name: "iezh Robert",
@@ -42,7 +42,7 @@ const Testimoni = ({
             country: "Poland",
             rating: "4.5",
             testimoni:
-                "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+                "The community's cooperation will make an important contribution to helping medical staff have more strength to fight against the pandemic",
         },
     ],
 }) => {

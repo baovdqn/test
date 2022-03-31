@@ -1,90 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Testimoni from "./Testimoni";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import ButtonOutline from "./misc/ButtonOutline.";
 import Maps from "../public/assets/HugeGlobal.svg";
+import { Link as LinkScroll } from "react-scroll";
 
 const Pricing = () => {
+    const [activeLink, setActiveLink] = useState(null);
+    const [scrollActive, setScrollActive] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScrollActive(window.scrollY > 0);
+        });
+    }, []);
     return (
         <div className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14" id="pricing">
             <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
                 <div className="flex flex-col w-full">
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
-                        Mục 2
+                        Our wish
                     </h3>
                     <p className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center">
-                        Dưới này là nội dung mục 2
+                        With the desire to contribute a small part of my strength to the people of
+                        Ukraine We wish to be able to partially support medical supplies and
+                        medicines for people people in refugee camps and concentration camps.
+                        Hopefully through a small contribution yours and ourselves, the people of
+                        Ukraine, is able to maintain life live and improve health in the current
+                        difficult situation.
                     </p>
-                    <p>Chỗ này chèn ảnh</p>
+                    <Image src="/assets/peace.jpeg" alt="peace" height={500} width={100} />
                 </div>
                 <div className="flex flex-col w-full my-16">
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
-                        Mục 2.1
+                        Proposed purpose
                     </h3>
                     <p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12">
-                        Nội dung mục 2.1
+                        Token: Build a community for peace, build a support charity for the victims
+                        of war in Ukraine in particular and around the world In general, that's what
+                        we aim for.
                     </p>
                     <div className="py-12 w-full px-8 mt-16">
                         {/* <Maps className="w-full h-auto" /> */}
-                        <div class="carousel w-full">
-                            <div id="slide1" className="carousel-item relative w-full">
-                                <img
-                                    src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-                                    className="w-full"
-                                />
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide4" className="btn btn-circle">
-                                        ❮
-                                    </a>
-                                    <a href="#slide2" className="btn btn-circle">
-                                        ❯
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="slide2" className="carousel-item relative w-full">
-                                <img
-                                    src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-                                    className="w-full"
-                                />
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide1" className="btn btn-circle">
-                                        ❮
-                                    </a>
-                                    <a href="#slide3" className="btn btn-circle">
-                                        ❯
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="slide3" className="carousel-item relative w-full">
-                                <img
-                                    src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-                                    className="w-full"
-                                />
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide2" className="btn btn-circle">
-                                        ❮
-                                    </a>
-                                    <a href="#slide4" className="btn btn-circle">
-                                        ❯
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="slide4" className="carousel-item relative w-full">
-                                <img
-                                    src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-                                    className="w-full"
-                                />
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide3" className="btn btn-circle">
-                                        ❮
-                                    </a>
-                                    <a href="#slide1" className="btn btn-circle">
-                                        ❯
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     {/* <div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap">
             <img
@@ -116,10 +73,10 @@ const Pricing = () => {
                 </div>
                 <div className="flex flex-col w-full my-16" id="testimoni">
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto">
-                        Mục 3: Trích dẫn lời nói của 1 số người
+                        Testimonial
                     </h3>
                     <p className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12">
-                        Nội dung mục 3
+                        The call of those who have supported
                     </p>
                     <div className="w-full flex flex-col py-12">
                         <Testimoni />
@@ -128,11 +85,28 @@ const Pricing = () => {
                         <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
                             <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                                 <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
-                                    Lời kêu gọi tiếp <br /> Chưa nghĩ ra nội dung
+                                    Ukraine needs your help
                                 </h5>
-                                <p>Lorem</p>
+                                <p>
+                                    Ukraine is in the middle of a humanitarian disaster. Hundreds of
+                                    children have died. Thousands of adults have died. The people
+                                    will continue their fight for freedom, but they need more
+                                    ammunition and necessities.
+                                </p>
                             </div>
-                            <ButtonPrimary>Help now</ButtonPrimary>
+                            <LinkScroll
+                                className="py-3 lg:py-4 px-12 lg:px-16 text-white-500 font-semibold rounded-lg bg-orange-500 hover:shadow-orange-md transition-all outline-none undefined"
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                onSetActive={() => {
+                                    setActiveLink("about");
+                                }}
+                            >
+                                Help now
+                            </LinkScroll>
                         </div>
                         <div
                             className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"

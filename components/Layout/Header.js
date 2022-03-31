@@ -10,7 +10,7 @@ const Header = () => {
     const [scrollActive, setScrollActive] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScrollActive(window.scrollY > 20);
+            // setScrollActive(window.scrollY > 2000);
         });
     }, []);
     return (
@@ -43,7 +43,7 @@ const Header = () => {
                                     : " text-black-500 hover:text-orange-500 a")
                             }
                         >
-                            Mục 1
+                            About
                         </LinkScroll>
                         <LinkScroll
                             activeClass="active"
@@ -61,7 +61,7 @@ const Header = () => {
                                     : " text-black-500 hover:text-orange-500 ")
                             }
                         >
-                            Mục 2
+                            Situation
                         </LinkScroll>
                         <LinkScroll
                             activeClass="active"
@@ -79,7 +79,7 @@ const Header = () => {
                                     : " text-black-500 hover:text-orange-500 ")
                             }
                         >
-                            Mục 3
+                            Our wish & Proposed purpose
                         </LinkScroll>
                         <LinkScroll
                             activeClass="active"
@@ -97,7 +97,7 @@ const Header = () => {
                                     : " text-black-500 hover:text-orange-500 ")
                             }
                         >
-                            Mục 4
+                            Testimonial
                         </LinkScroll>
                     </ul>
                 </nav>
@@ -169,7 +169,7 @@ const Header = () => {
                                     d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                                 />
                             </svg>
-                            Feature
+                            Situation
                         </LinkScroll>
                         <LinkScroll
                             activeClass="active"
@@ -201,7 +201,7 @@ const Header = () => {
                                     d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                             </svg>
-                            Pricing
+                            Our wish & Proposed purpose
                         </LinkScroll>
                         <LinkScroll
                             activeClass="active"
